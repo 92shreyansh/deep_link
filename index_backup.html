@@ -6,19 +6,21 @@
     <title>App Installation Check</title>
 </head>
 <body>
+
     <!-- JavaScript code for checking app installation -->
     <script>
         function checkAppInstallation() {
             var customUrlScheme = "beckn://ondc";
 
-            // Create an anchor element
-            var link = document.createElement("a");
-
-            // Set href attribute with the intent URI
-            link.setAttribute("href", "intent://ondc/#Intent;scheme=beckn;S.browser_fallback_url=https://ondc.org;end");
-
-            // Trigger click event to open the app or fallback URL
-            link.click();
+            // Attempt to open the custom URL scheme
+            // var iframe = document.createElement("iframe");
+            // iframe.style.display = "none";
+            // iframe.src = customUrlScheme;
+            // document.body.appendChild(iframe);
+            //window.location.href = customUrlScheme;
+            //location.assign(customUrlScheme)
+            href="intent://ondc/#Intent;scheme=beckn;S.browser_fallback_url=https://ondc.org;end"
+            //handle event to check app installed or not
 
             // Set a timer to check if the app was opened
             var timer = setTimeout(function () {
