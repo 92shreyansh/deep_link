@@ -17,14 +17,16 @@
             // iframe.style.display = "none";
             // iframe.src = customUrlScheme;
             // document.body.appendChild(iframe);
-            window.location.href = customUrlScheme
+            //window.location.href = customUrlScheme;
+            location.assign(customUrlScheme)
+            //handle event to check app installed or not
 
             // Set a timer to check if the app was opened
             var timer = setTimeout(function () {
                 // This function will execute after a short delay
                 // Handle the case when the app is not installed
                 alert("App not installed");
-            }, 1000); // Adjust the timeout as needed
+            }, 500); // Adjust the timeout as needed
         }
 
         // Call the function to check app installation
