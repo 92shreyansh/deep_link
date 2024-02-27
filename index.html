@@ -13,10 +13,11 @@
             var customUrlScheme = "beckn://ondc";
 
             // Attempt to open the custom URL scheme
-            var iframe = document.createElement("iframe");
-            iframe.style.display = "none";
-            iframe.src = customUrlScheme;
-            document.body.appendChild(iframe);
+            // var iframe = document.createElement("iframe");
+            // iframe.style.display = "none";
+            // iframe.src = customUrlScheme;
+            // document.body.appendChild(iframe);
+            window.location.href = customUrlScheme
 
             // Set a timer to check if the app was opened
             var timer = setTimeout(function () {
