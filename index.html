@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take a QR code</title>
+    <title>App Installation Check</title>
 </head>
 <body>
-    <a href="intent://ondc/#Intent;scheme=beckn;S.browser_fallback_url=https://ondc.org;end">
-        Take a QR code
-    </a>
+
+    <!-- JavaScript code for checking app installation -->
+    <script>
+        function checkAppInstallation() {
+            var customUrlScheme = "beckn://ondc";
+
+            // Attempt to open the custom URL scheme
+            // var iframe = document.createElement("iframe");
+            // iframe.style.display = "none";
+            // iframe.src = customUrlScheme;
+            // document.body.appendChild(iframe);
+            //window.location.href = customUrlScheme;
+            //location.assign(customUrlScheme)
+            href="intent://ondc/#Intent;scheme=beckn;S.browser_fallback_url=https://ondc.org;end"
+            //handle event to check app installed or not
+
+            // Set a timer to check if the app was opened
+            var timer = setTimeout(function () {
+                // This function will execute after a short delay
+                // Handle the case when the app is not installed
+                alert("App not installed");
+            }, 500); // Adjust the timeout as needed
+        }
+
+        // Call the function to check app installation
+        checkAppInstallation();
+    </script>
 </body>
 </html>
