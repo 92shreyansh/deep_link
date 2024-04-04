@@ -6,8 +6,19 @@
     <title>Take a QR code</title>
 </head>
 <body>
-    <a href="intent://ondc/#Intent;scheme=beckn;S.browser_fallback_url=https://ondc.org;end">
+    <a href="intent://ondc/#Intent;scheme=beckn;S.browser_fallback_url=https://ondc.org;end" id="clickTarget">
         Take a QR code
     </a>
+    <!-- <a href="intent:some-intent-string" id="clickTarget">Open in our app</a> -->
+    <script>
+    window.onload = function() {
+        var clickTarget = document.getElementById("clickTarget");
+        var fakeMouseEvent = document.createEvent('MouseEvents');
+        fakeMouseEvent.initMouseEvent("click", true, true, window,
+            0, 0, 0, 20, 10, false, false, false, false, 0, null);
+
+        clickTarget.dispatchEvent(fakeMouseEvent);
+    };
+    </script>
 </body>
 </html>
